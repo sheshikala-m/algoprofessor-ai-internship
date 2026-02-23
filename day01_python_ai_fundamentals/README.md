@@ -7,8 +7,18 @@ Tasks Completed:
 - Generated statistical summary
 - Visualized feature distributions
 
+- Day 02 – Advanced EDA
+
+Tasks Completed:
+- Generated correlation matrix
+- Created heatmap visualization
+- Plotted boxplots for outlier detection
+- Built pairplot for class distribution
+- Documented observations
+
 Tools Used:
 Python, Pandas, Matplotlib
 
 Dataset:
 Iris dataset (sklearn built-in)
+

@@ -22,3 +22,12 @@ Python, Pandas, Matplotlib
 Dataset:
 Iris dataset (sklearn built-in)
 
+Day 03 — NumPy Numerical Analysis
+
+Tasks Completed:
+- Implemented NumPy array operations
+- Performed statistical computations
+- Executed reshaping transformations
+- Generated random numerical datasets
+- Structured code using modular scripting approach
+- 

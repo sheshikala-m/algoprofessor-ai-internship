@@ -30,4 +30,21 @@ Tasks Completed:
 - Executed reshaping transformations
 - Generated random numerical datasets
 - Structured code using modular scripting approach
+
+ Day 04 — Iris Data Engineering & Analysis Pipeline
+
+Tasks Completed:
+- Loaded dataset from CSV file
+- Inspected dataset structure and datatypes
+- Checked and validated missing values
+- Generated statistical summary metrics
+- Performed correlation analysis
+- Conducted grouped feature aggregation by target class
+
+Dataset Used:
+Iris Dataset (CSV format)
+
+Script File:
+iris_csv_pipeline.py
+
 - 

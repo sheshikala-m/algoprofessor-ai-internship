@@ -1,48 +1,76 @@
 """
-Day 04 — Iris CSV Analysis Pipeline
+Day 04 — Iris Data Engineering & Analysis Pipeline
 Internship: AlgoProfessor AI R&D Internship
 Intern: Sheshikala Mamidisetti
 
 Objective:
-To load Iris dataset from CSV file and perform
-structured exploratory data analysis.
+To simulate real-world data engineering workflow by loading Iris dataset
+from CSV, performing data validation, statistical analysis, correlation
+study, and grouped aggregations.
 """
 
 import pandas as pd
 
 
 def load_dataset():
-    df = pd.read_csv("day01_python_ai_fundamentals/iris_dataset.csv")
+    """Load dataset from CSV."""
+    path = "day01_python_ai_fundamentals/iris_dataset.csv"
+    df = pd.read_csv(path)
+
+    print("\nDataset loaded successfully.")
     return df
 
 
 def inspect_data(df):
-    print("\n===== First 5 Rows =====")
+    """Inspect dataset structure."""
+    print("\n===== First 5 Records =====")
     print(df.head())
 
-    print("\n===== Dataset Info =====")
+    print("\n===== Dataset Information =====")
     print(df.info())
 
 
-def statistical_summary(df):
-    print("\n===== Statistical Summary =====")
-    print(df.describe())
-
-
-def null_check(df):
+def check_missing(df):
+    """Check and handle missing values."""
     print("\n===== Missing Values =====")
-    print(df.isnull().sum())
+    missing = df.isnull().sum()
+    print(missing)
+
+
+def statistical_analysis(df):
+    """Generate statistical summary."""
+    print("\n===== Statistical Summary =====")
+    stats = df.describe()
+    print(stats)
+
+
+def correlation_analysis(df):
+    """Perform correlation study."""
+    print("\n===== Correlation Analysis =====")
+
+    correlation = df.corr(numeric_only=True)
+    print(correlation)
+
+
+def grouping_analysis(df):
+    """Group analysis by target class."""
+    print("\n===== Average Feature Values by Target =====")
+
+    grouped = df.groupby("target").mean()
+    print(grouped)
 
 
 def main():
-    print("Starting Iris CSV EDA Pipeline...\n")
+    print("Starting Iris Data Engineering Pipeline...\n")
 
     df = load_dataset()
     inspect_data(df)
-    statistical_summary(df)
-    null_check(df)
+    check_missing(df)
+    statistical_analysis(df)
+    correlation_analysis(df)
+    grouping_analysis(df)
 
-    print("\nEDA Completed Successfully.")
+    print("\nPipeline Execution Completed Successfully.")
 
 
 if __name__ == "__main__":

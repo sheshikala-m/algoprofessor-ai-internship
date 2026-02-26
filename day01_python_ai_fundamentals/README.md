@@ -47,4 +47,13 @@ Iris Dataset (CSV format)
 Script File:
 iris_csv_pipeline.py
 
+ 
+Day 05 — Visualization Automation
+
+Tasks Completed:
+- Generated correlation heatmap
+- Created boxplot distribution charts
+- Built pairplot visualizations
+- Automated chart saving
+- Structured outputs folder
 - 

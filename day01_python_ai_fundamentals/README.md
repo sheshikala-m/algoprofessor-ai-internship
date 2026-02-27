@@ -1,3 +1,4 @@
+
 Day 01 – Python AI Fundamentals
 
 Tasks Completed:
@@ -56,4 +57,18 @@ Tasks Completed:
 - Built pairplot visualizations
 - Automated chart saving
 - Structured outputs folder
-- 
+
+Day 06 - OOP analysis
+Tasks Completed:
+
+Designed class-based analysis engine
+Implemented dataset loading module
+Generated statistical summaries
+Performed correlation evaluation
+Automated heatmap visualization
+
+Script File:
+iris_oop_analysis_engine.py
+
+Output Generated:
+oop_heatmap.png

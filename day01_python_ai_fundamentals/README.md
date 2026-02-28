@@ -86,3 +86,15 @@ Python, Pandas, Scikit-learn
 
 Outcome:
 Developed a basic semantic search pipeline demonstrating RAG fundamentals.
+
+Week 1 — Foundations Completed
+
+This week focused on building strong engineering foundations:
+
+- GitHub workflow and daily commits
+- NumPy & Pandas EDA pipeline
+- Visualization dashboards using Matplotlib & Seaborn
+- Object-Oriented refactoring of analysis
+- Project environment configuration
+- Structured repository organization
+

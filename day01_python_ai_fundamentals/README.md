@@ -72,3 +72,17 @@ iris_oop_analysis_engine.py
 
 Output Generated:
 oop_heatmap.png
+
+ Day 07 — Retrieval Augmented Generation (RAG)
+
+Tasks Completed:
+- Created small knowledge base
+- Generated TF-IDF embeddings
+- Implemented cosine similarity search
+- Built query retrieval function
+
+Tools Used:
+Python, Pandas, Scikit-learn
+
+Outcome:
+Developed a basic semantic search pipeline demonstrating RAG fundamentals.

@@ -10,12 +10,13 @@ and visualization automation.
 """
 
 
+
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import os
 
-# Fix display cutoff in Colab/Jupyter
+# Fix display cutoff
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 1000)
 
@@ -26,41 +27,39 @@ class IrisAnalysis:
     exploratory data analysis on the Iris dataset.
     """
 
-    def __init__(self, file_path):
-        self.file_path = file_path
+    def __init__(self, file_path="iris_dataset.csv"):
+        # Get script folder path
+        base_dir = os.path.dirname(__file__)
+        self.file_path = os.path.join(base_dir, file_path)
         self.df = None
 
-# Load Dataset
-
+    # Load Dataset
     def load_data(self):
         self.df = pd.read_csv(self.file_path)
         print("Dataset loaded successfully\n")
 
-
-# Statistical Summary
-
+    # Statistical Summary
     def show_summary(self):
         print("Statistical Summary:\n")
-        return self.df.describe()
+        print(self.df.describe())
 
-
- # Correlation Matrix
-
+    # Correlation Matrix
     def show_correlation(self):
         print("\nCorrelation Matrix:\n")
-        return self.df.corr(numeric_only=True)
+        correlation = self.df.corr()
+        print(correlation)
+        return correlation
 
-# Heatmap Visualization
-
+    # Heatmap Visualization
     def create_heatmap(self):
 
-# Create outputs folder if not exists
+        # Create outputs folder if not exists
         os.makedirs("outputs", exist_ok=True)
 
-        plt.figure(figsize=(8,6))
+        plt.figure(figsize=(8, 6))
 
         sns.heatmap(
-            self.df.corr(numeric_only=True),
+            self.df.corr(),
             annot=True,
             cmap="coolwarm",
             linewidths=0.5
@@ -75,22 +74,16 @@ class IrisAnalysis:
         print("\nHeatmap saved in outputs folder")
 
 
+# Main Execution Function
+def main():
+    analysis = IrisAnalysis()
+    analysis.load_data()
+    analysis.show_summary()
+    analysis.show_correlation()
+    analysis.create_heatmap()
 
-# Main Execution
+    print("\nOOP Analysis completed successfully")
 
-analysis = IrisAnalysis("iris_dataset.csv")
-
-analysis.load_data()
-
-summary = analysis.show_summary()
-summary
-
-correlation = analysis.show_correlation()
-correlation
-
-analysis.create_heatmap()
-
-print("\nOOP Analysis completed successfully")
 
 if __name__ == "__main__":
     main()

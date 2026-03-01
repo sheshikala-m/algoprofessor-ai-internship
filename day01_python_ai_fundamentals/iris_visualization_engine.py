@@ -6,10 +6,10 @@ import seaborn as sns
 import os
 
 # Load dataset
-df = pd.read_csv("day01_python_ai_fundamentals/iris_dataset.csv")
+df = pd.read_csv("iris_dataset.csv")
 
 # Create outputs folder
-output_path = "day01_python_ai_fundamentals/outputs"
+output_path = "outputs"
 os.makedirs(output_path, exist_ok=True)
 
 # 1. Correlation Heatmap

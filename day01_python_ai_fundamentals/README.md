@@ -1,3 +1,9 @@
+## Note on Development Progress
+Initial commits in this folder represent incremental learning
+and experimentation during the Day 01 foundation phase.
+Subsequent commits follow the official AlgoProfessor internship
+day-wise milestone structure.
+
 
 Day 01 – Python AI Fundamentals
 

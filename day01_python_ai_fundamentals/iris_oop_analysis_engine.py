@@ -78,7 +78,7 @@ class IrisAnalysis:
 
 # Main Execution
 
-analysis = IrisAnalysis("/content/iris_dataset.csv")
+analysis = IrisAnalysis("iris_dataset.csv")
 
 analysis.load_data()
 

@@ -14,7 +14,7 @@ import pandas as pd
 
 def load_dataset():
     """Load dataset from CSV."""
-    path = "day01_python_ai_fundamentals/iris_dataset.csv"
+    path = "iris_dataset.csv"
     df = pd.read_csv(path)
 
     print("\nDataset loaded successfully.")
@@ -23,30 +23,30 @@ def load_dataset():
 
 def inspect_data(df):
     """Inspect dataset structure."""
-    print("\n===== First 5 Records =====")
+    print("\n=== First 5 Records ===")
     print(df.head())
 
-    print("\n===== Dataset Information =====")
+    print("\n=== Dataset Information ===")
     print(df.info())
 
 
 def check_missing(df):
     """Check and handle missing values."""
-    print("\n===== Missing Values =====")
+    print("\n=== Missing Values ===")
     missing = df.isnull().sum()
     print(missing)
 
 
 def statistical_analysis(df):
     """Generate statistical summary."""
-    print("\n===== Statistical Summary =====")
+    print("\n=== Statistical Summary ===")
     stats = df.describe()
     print(stats)
 
 
 def correlation_analysis(df):
     """Perform correlation study."""
-    print("\n===== Correlation Analysis =====")
+    print("\n=== Correlation Analysis ===")
 
     correlation = df.corr(numeric_only=True)
     print(correlation)
@@ -54,7 +54,7 @@ def correlation_analysis(df):
 
 def grouping_analysis(df):
     """Group analysis by target class."""
-    print("\n===== Average Feature Values by Target =====")
+    print("\n=== Average Feature Values by Target ===")
 
     grouped = df.groupby("target").mean()
     print(grouped)

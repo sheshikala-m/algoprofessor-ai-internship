@@ -12,12 +12,12 @@ study, and grouped aggregations.
 import pandas as pd
 
 
-def load_dataset():
-    """Load dataset from CSV."""
-    path = "iris_dataset.csv"
-    df = pd.read_csv(path)
+import os
 
-    print("\nDataset loaded successfully.")
+def load_dataset():
+    base_dir = os.path.dirname(__file__)   # folder where script exists
+    path = os.path.join(base_dir, "iris_dataset.csv")
+    df = pd.read_csv(path)
     return df
 
 
@@ -48,7 +48,7 @@ def correlation_analysis(df):
     """Perform correlation study."""
     print("\n=== Correlation Analysis ===")
 
-    correlation = df.corr(numeric_only=True)
+    correlation = df.corr()
     print(correlation)
 
 
@@ -75,3 +75,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+

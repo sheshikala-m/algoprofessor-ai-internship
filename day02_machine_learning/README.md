@@ -1,61 +1,90 @@
-#Day 02 — Linear Regression (Breast Cancer Dataset)
+# AlgoProfessor AI R&D Internship — Phase 1
 
-Intern: Sheshikala Mamidisetti
-Internship: AlgoProfessor AI R&D Internship — Batch 2026
-Phase: Phase 1 | Days 6–10
-Date: March 1, 2026
+Intern: Sheshikala Mamidisetti  
+Batch: 2026  
 
-#Objective
+---
 
-Started Day 02 by building a Linear Regression model as a baseline on the Breast Cancer dataset. The aim was to set up the preprocessing workflow and observe how a regression model performs on a classification-type problem.
+# Breast Cancer Dataset Models
 
-#Model
+## 1. Linear Regression
 
-Linear Regression using Scikit-learn.
+### Objective
+Built a Linear Regression model as a baseline to establish the preprocessing workflow and observe performance on a classification-type dataset.
 
-#Result
+### Model
+Linear Regression (Scikit-learn)
 
-Accuracy achieved: 81%.
-This serves as a baseline before applying classification algorithms.
+### Results
+- Accuracy: 81%  
+- Used as a baseline before applying classification algorithms
 
-#Dataset
+### Dataset
+Breast Cancer dataset (breast-cancer.csv)  
+- 286 rows  
+- 9 features  
+- Target: recurrence / no recurrence  
 
-Breast Cancer dataset (breast-cancer.csv) from the UCI Machine Learning Repository with 286 rows and 9 features.
-Target variable represents recurrence or no recurrence.
+### Tools Used
+Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
 
-#Tools Used
+---
 
-Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn.
+## 2. Logistic Regression
 
+### Objective
+Implemented Logistic Regression including preprocessing, model training, evaluation, and visualization.
 
-#Day 02 — Logistic Regression (Breast Cancer Dataset)
+### Model
+Logistic Regression (Scikit-learn)
 
-Intern: Sheshikala Mamidisetti
-Internship: AlgoProfessor AI R&D Internship — Batch 2026
-Phase: Phase 1 | Days 6–10
-Date: March 2, 2026
+### Results
+- Accuracy: 69%  
+- ROC-AUC Score: 0.60  
 
-#Objective
+### Dataset
+Breast Cancer dataset (286 samples, 9 features)
 
-Implemented Logistic Regression on the Breast Cancer dataset including preprocessing, model training, evaluation, and visualization.
+### Output
+Visualization saved in `outputs/logistic_regression_results.png`
 
-#Model
+### Tools Used
+Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
 
-Logistic Regression using Scikit-learn.
+---
 
-#Result
+#  Heart Disease Prediction (Decision Tree)
 
-Accuracy: 69%
-ROC-AUC Score: 0.60
+## Objective
+Built and optimized a Decision Tree classifier to predict heart disease using supervised machine learning.
 
-#Dataset
+## Dataset
+Heart Disease dataset containing medical attributes such as age, cholesterol, blood pressure, etc.  
+Target variable: presence or absence of heart disease.
 
-Breast Cancer dataset (breast-cancer.csv) with 286 samples and 9 features.
+## Workflow
+1. Statistical data analysis  
+2. Correlation heatmap  
+3. Boxplot visualization  
+4. Train-test split  
+5. Decision Tree implementation  
+6. Hyperparameter tuning (max_depth)  
+7. Model evaluation  
 
-#Tools Used
+## Model Performance
+- Initial Accuracy: ~0.80  
+- Best Accuracy: 0.836 (83.6%)  
+- Best max_depth: 5  
+- GridSearchCV and RandomizedSearchCV used for optimization  
 
-Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn.
+## Observations
+- Accuracy improved with moderate depth increase  
+- Very deep trees increased complexity without performance gain  
+- Risk of overfitting at higher depths  
+- Simpler models provided stable and interpretable results  
 
-Output
+## Technologies Used
+Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, Jupyter Notebook  
 
-Visualization saved in the outputs folder as logistic_regression_results.png.
+## Conclusion
+The tuned Decision Tree model achieved improved performance and demonstrated the importance of controlling model complexity to prevent overfitting.

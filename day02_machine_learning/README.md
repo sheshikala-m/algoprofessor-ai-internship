@@ -128,6 +128,26 @@ Random Forest improved overall predictive stability and achieved a high ROC-AUC 
 - Jupyter Notebook  
 
 ---
+Support Vector Machine (SVM) Classifier
+
+Objective
+Applied Support Vector Machine (SVM) for binary classification to identify an optimal decision boundary between classes.
+
+Workflow
+Data preprocessing and feature scaling
+Train-test split
+SVM model training
+Evaluation using Accuracy and ROC-AUC
+
+Results
+Accuracy: ~0.82
+ROC-AUC: ~0.88
+
+Output
+outputs/svm_classification_results.png
+
+Key Insight
+SVM showed strong performance on the dataset when proper feature scaling was applied, making it an effective classifier for structured healthcare data.
 
 # Overall Conclusion
 

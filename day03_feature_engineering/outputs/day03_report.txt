@@ -1,0 +1,120 @@
+
+================================================================================
+        DAY 03 — COMPLETE ML REPORT
+        AlgoProfessor AI R&D Internship — Batch 2026
+        Intern  : Sheshikala Mamidisetti
+        Dataset : Wine Quality (winequality-red.csv)
+        Date    : March 06, 2026
+================================================================================
+
+DATASET SUMMARY
+---------------
+File     : winequality-red.csv
+Rows     : 1599
+Features : 11 (chemical properties of red wine)
+Target   : quality (binary — good wine >= 6, bad wine < 6)
+Source   : UCI Machine Learning Repository
+
+--------------------------------------------------------------------------------
+1. ENSEMBLE MODELS (ensemble_models.py)
+--------------------------------------------------------------------------------
+Models   : XGBoost vs LightGBM
+Dataset  : Wine Quality (binary classification)
+
+Results:
+  XGBoost  — Accuracy: 0.8250 | ROC-AUC: 0.8812
+  LightGBM — Accuracy: 0.7906 | ROC-AUC: 0.8695
+
+Winner   : XGBoost (higher accuracy and ROC-AUC)
+Key Finding: Alcohol content is the most important feature
+             for predicting wine quality in both models.
+
+--------------------------------------------------------------------------------
+2. FEATURE ENGINEERING (feature_engineering.py)
+--------------------------------------------------------------------------------
+New Features Created:
+  acidity_ratio   = fixed_acidity / volatile_acidity
+  sulfur_ratio    = free_sulfur / total_sulfur
+  alcohol_density = alcohol / density
+  total_acidity   = fixed + volatile + citric acid
+
+Feature Selection Methods:
+  SelectKBest  : alcohol, volatile_acidity, alcohol_density
+  RFE          : alcohol, sulphates, alcohol_density
+  Random Forest: alcohol_density, alcohol, sulphates
+
+Accuracy Improvement:
+  Without new features : 0.8063
+  With    new features : 0.8219
+  Improvement          : +1.56%
+
+Key Finding: alcohol_density (engineered feature) became
+             the most important feature overall.
+
+--------------------------------------------------------------------------------
+3. DIMENSIONALITY REDUCTION (dimensionality_reduction.py)
+--------------------------------------------------------------------------------
+Methods  : PCA, LDA, SVD
+Dataset  : Wine Quality (11 features reduced to 2)
+
+Results:
+  PCA — 2 components — Accuracy: 0.7094 — Variance: 45.68%
+  LDA — 1 component  — Accuracy: 0.7125
+  SVD — 2 components — Accuracy: 0.7094 — Variance: 45.68%
+
+Winner   : LDA (best accuracy with 1 component)
+Key Finding: 9 PCA components needed to explain 95% variance.
+             Accuracy drops when reducing to 2 components
+             — expected trade-off.
+
+--------------------------------------------------------------------------------
+4. PRODUCTION ML PIPELINE (ml_pipeline.py)
+--------------------------------------------------------------------------------
+Pipelines: Logistic Regression, Random Forest, SVM, Gradient Boosting
+Steps    : StandardScaler -> SelectKBest/PCA -> Model
+Evaluation: 5-Fold Cross Validation
+
+Key Finding: Pipeline ensures no data leakage between train
+             and test sets — production-grade approach.
+
+--------------------------------------------------------------------------------
+5. PYTORCH NEURAL NETWORK FROM SCRATCH (pytorch_nn_scratch.py)
+--------------------------------------------------------------------------------
+Architecture: 11 -> 64 -> 32 -> 16 -> 1
+Activation  : ReLU (hidden layers) + Sigmoid (output)
+Loss        : Binary Cross Entropy
+Optimizer   : Adam (lr=0.001)
+Epochs      : 50
+Dropout     : 0.3 (regularization)
+
+Key Finding: Neural network learns wine quality patterns
+             through backpropagation from scratch using
+             PyTorch tensors and autograd.
+
+--------------------------------------------------------------------------------
+OVERALL DAY 03 SUMMARY
+--------------------------------------------------------------------------------
+Best Model Overall    : XGBoost (Accuracy: 0.8250)
+Best Feature          : alcohol_density (engineered)
+Best Dim Reduction    : LDA (Accuracy: 0.7125)
+Feature Engineering   : +1.56% accuracy improvement
+
+Files Generated:
+  ensemble_models.py
+  feature_engineering.py
+  dimensionality_reduction.py
+  ml_pipeline.py
+  pytorch_nn_scratch.py
+  generate_report.py
+
+Output Charts:
+  ensemble_models_results.png
+  feature_engineering_results.png
+  dimensionality_reduction_results.png
+  ml_pipeline_results.png
+  pytorch_nn_results.png
+
+================================================================================
+END OF REPORT
+Generated on : March 06, 2026 at 10:02 PM
+================================================================================

@@ -3,15 +3,13 @@ Day 04 — Training Pipeline (MNIST Dataset)
 Internship: AlgoProfessor AI R&D Internship
 Intern: Sheshikala Mamidisetti
 Objective:
-To build a complete production-grade training pipeline for
-deep neural networks on MNIST — covering data loading,
-preprocessing, model training, evaluation, checkpointing
-and result saving in one reusable pipeline.
+Production-grade training pipeline that runs all Day 04
+deep learning models in sequence and tracks results.
 """
 
+import os
 import numpy as np
 import matplotlib.pyplot as plt
-import os
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -21,13 +19,31 @@ from sklearn.metrics import accuracy_score, classification_report
 import time
 
 
+def run_all_models():
+    print("=======================================")
+    print("   DAY 04: DEEP LEARNING PIPELINE     ")
+    print("=======================================")
+
+    print("\n[Step 1] Running Neural Network from Scratch...")
+    os.system("python neural_network_scratch.py")
+
+    print("\n[Step 2] Running CNN Classifier...")
+    os.system("python cnn_classifier.py")
+
+    print("\n[Step 3] Running Transfer Learning...")
+    os.system("python transfer_learning.py")
+
+    print("\n=======================================")
+    print("   PIPELINE COMPLETE. CHECK OUTPUTS.  ")
+    print("=======================================")
+
+
 def load_data(base_dir, batch_size=64):
-    print("--- 1. Loading MNIST Dataset (Auto Download) ---")
+    print("\n--- Loading MNIST Dataset (Auto Download) ---")
     transform = transforms.Compose([
         transforms.ToTensor(),
         transforms.Normalize((0.1307,), (0.3081,))
     ])
-
     train_dataset = datasets.MNIST(root=os.path.join(base_dir, "data"),
                                    train=True,  download=True, transform=transform)
     test_dataset  = datasets.MNIST(root=os.path.join(base_dir, "data"),
@@ -38,7 +54,6 @@ def load_data(base_dir, batch_size=64):
 
     print(f"Train samples : {len(train_dataset)}")
     print(f"Test samples  : {len(test_dataset)}")
-    print(f"Batch size    : {batch_size}")
     return train_loader, test_loader
 
 
@@ -88,7 +103,7 @@ class TrainingPipeline:
         return epoch_loss / len(train_loader), correct / total
 
     def train(self, train_loader, epochs=10):
-        print("\n--- 2. Running Training Pipeline ---")
+        print("\n--- Running Detailed Training Pipeline ---")
         print(f"Epochs    : {epochs}")
         print(f"Optimizer : Adam")
         print(f"Scheduler : ReduceLROnPlateau\n")
@@ -114,7 +129,7 @@ class TrainingPipeline:
         return self.history
 
     def evaluate(self, test_loader):
-        print("\n--- 3. Evaluating Pipeline ---")
+        print("\n--- Evaluating Pipeline ---")
         self.model.eval()
         all_preds  = []
         all_labels = []
@@ -133,23 +148,19 @@ class TrainingPipeline:
         return all_preds, all_labels, accuracy
 
     def save_results(self, accuracy, output_dir):
-        results = {
-            "model"          : "PipelineModel",
-            "dataset"        : "MNIST",
-            "test_accuracy"  : round(accuracy, 4),
-            "epochs"         : len(self.history["loss"]),
-            "final_loss"     : round(self.history["loss"][-1], 4),
-            "avg_epoch_time" : round(np.mean(self.history["time"]), 2)
-        }
+        os.makedirs(output_dir, exist_ok=True)
         save_path = os.path.join(output_dir, "results_pipeline.txt")
         with open(save_path, "w") as f:
-            for k, v in results.items():
-                f.write(f"{k}: {v}\n")
+            f.write(f"Model          : PipelineModel\n")
+            f.write(f"Dataset        : MNIST\n")
+            f.write(f"Test Accuracy  : {round(accuracy, 4)}\n")
+            f.write(f"Epochs         : {len(self.history['loss'])}\n")
+            f.write(f"Final Loss     : {round(self.history['loss'][-1], 4)}\n")
+            f.write(f"Avg Epoch Time : {round(np.mean(self.history['time']), 2)}s\n")
         print(f"Results saved to: {save_path}")
 
 
 def visualize_results(history, base_dir):
-    print("\n--- 4. Visualizing Pipeline Results ---")
     output_dir = os.path.join(base_dir, "outputs")
     os.makedirs(output_dir, exist_ok=True)
 
@@ -187,10 +198,13 @@ def visualize_results(history, base_dir):
     plt.close()
 
 
-def run_training_pipeline():
+if __name__ == "__main__":
+    # Step 1 — Run all models as pipeline
+    run_all_models()
+
+    # Step 2 — Run detailed pipeline separately
     base_dir   = os.path.dirname(os.path.abspath(__file__))
     output_dir = os.path.join(base_dir, "outputs")
-    os.makedirs(output_dir, exist_ok=True)
 
     train_loader, test_loader = load_data(base_dir)
     model    = PipelineModel()
@@ -201,7 +215,3 @@ def run_training_pipeline():
     visualize_results(history, base_dir)
 
     print("\nDay 04 Training Pipeline completed successfully.")
-
-
-if __name__ == "__main__":
-    run_training_pipeline()

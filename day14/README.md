@@ -1,4 +1,4 @@
-# Day 7: RAG Pipeline for ML Experiment Tracker
+# Day 14: RAG Pipeline for ML Experiment Tracker
 
 **Author:** Sheshikala  
 **Topic:** Build a full Retrieval-Augmented Generation pipeline over ML experiment data
@@ -14,7 +14,7 @@ A complete RAG pipeline that lets you ask questions about ML experiments, resear
 ## Folder Structure
 
 ```
-day/
+day14/
   vector_db_setup.py      - Sets up ChromaDB as the vector store
   data_fetcher.py         - Loads ML experiment data (mock DB, JSON, CSV)
   chunking_strategy.py    - 5 strategies: fixed, sentence, paragraph, recursive, semantic
@@ -76,3 +76,9 @@ All files work without Groq API key using mock generators.
 | RAG | Retrieval gives LLM accurate context, reduces hallucination |
 | Groq | Fast LLM inference API, simple to integrate |
 
+---
+
+## Connects To
+
+- Day 13: Vector DB concepts (ChromaDB, FAISS, hybrid search)
+- Day 15: Graph RAG, advanced RAG techniques, streaming QA

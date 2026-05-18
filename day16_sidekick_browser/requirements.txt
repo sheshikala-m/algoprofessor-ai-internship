@@ -1,0 +1,25 @@
+# Day 15 — SidekickBrowser Multi-Agent System
+# Core
+langgraph>=0.2.0
+langchain>=0.2.0
+playwright>=1.44.0
+autogen-agentchat>=0.4.0     # AutoGen v0.4 open-source
+
+# Time Series
+numpy>=1.26.0
+pandas>=2.2.0
+matplotlib>=3.8.0
+statsmodels>=0.14.0
+scikit-learn>=1.4.0
+prophet                       # optional — ARIMA used as fallback
+
+# Deep Learning (optional — LSTM forecasting)
+torch>=2.3.0                  # optional — remove if not needed
+
+# A2A Messaging backends (install only the one you use)
+redis[asyncio]>=5.0.0         # for Redis Streams backend
+aio-pika>=9.4.0               # for RabbitMQ backend
+
+# Dev / Testing
+pytest>=8.0.0
+pytest-asyncio>=0.23.0

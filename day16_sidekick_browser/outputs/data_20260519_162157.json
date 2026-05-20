@@ -1,0 +1,23 @@
+[
+  {
+    "source_url": "https://en.wikipedia.org/wiki/Data_science",
+    "title": "Data science - Wikipedia",
+    "word_count": 406,
+    "snippet": "Data science is an interdisciplinary academic field[1] that uses statistics, scientific computing, scientific methods, processing, scientific visualization, algorithms, and systems to extract or extrapolate knowledge from potentially noisy, structured, or unstructured data.[2] Data science plays a critical role in modern decision-making by enabling organizations to extract actionable insights from large and complex datasets.[3] Data science also integrates domain knowledge from…",
+    "table_count": 1,
+    "scraped_at": "2026-05-19T16:21:57.585494",
+    "first_table_preview": [
+      [
+        "hide.mw-parser-output .navbar{display:inline;font-size:88%;font-weight:normal}.mw-parser-output .navbar-collapse{float:left;text-align:left}.mw-parser-output .navbar-boxtext{word-spacing:0}.mw-parser-output .navbar ul{display:inline-block;white-space:nowrap;line-height:inherit}.mw-parser-output .navbar-brackets::before{margin-right:-0.125em;content:\"[ \"}.mw-parser-output .navbar-brackets::after{margin-left:-0.125em;content:\" ]\"}.mw-parser-output .navbar li{word-spacing:-0.125em}.mw-parser-output .navbar a>span,.mw-parser-output .navbar a>abbr{text-decoration:inherit}.mw-parser-output .navbar-mini abbr{font-variant:small-caps;border-bottom:none;text-decoration:none;cursor:inherit}.mw-parser-output .navbar-ct-full{font-size:114%;margin:0 7em}.mw-parser-output .navbar-ct-mini{font-size:114%;margin:0 4em}html.skin-theme-clientpref-night .mw-parser-output .navbar li a abbr{color:var(--color-base)!important}@media(prefers-color-scheme:dark){html.skin-theme-clientpref-os .mw-parser-output .navbar li a abbr{color:var(--color-base)!important}}@media print{.mw-parser-output .navbar{display:none!important}}vteData"
+      ],
+      [
+        "Information, data, and value",
+        "\nInformation\nMeta\nType\nStructure\nEcosystem\nLibrary\nInfrastructure\nValue\n"
+      ],
+      [
+        "Data categories and semantic structure",
+        "\nData categories\nMaster data\nMaster data management\nReference data\nTransaction data\nAnalytical data\nMetadata\nCode tables\nControlled vocabulary\nCrosswalks\nHierarchies\nObservation data\nDark data\nTrade and market data\n"
+      ]
+    ]
+  }
+]

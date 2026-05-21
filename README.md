@@ -868,6 +868,254 @@ This week's internship work aligns with the following IIT Indore modules:
 * Completed DataSquad milestone aligned with IIT Indore advanced AI & DS modules
 
 
+# Weekly Progress Update — Week 11 (May 17 – May 21)
+
+# SidekickBrowser Data Co-pilot
+
+SidekickBrowser Data Co-pilot is a multi-agent AI-powered research, analytics, and forecasting system built using Python, LangGraph, Playwright, AutoGen, Redis Streams, and RabbitMQ. The project simulates an intelligent AI data co-pilot capable of autonomous research, analytics orchestration, agent communication, and forecasting workflows.
+
+---
+
+# Project Overview
+
+This milestone focused on building an AI-driven autonomous research and analytics platform capable of:
+
+- AI-powered web research automation
+- Conversable AutoGen analytics agents
+- Group-chat based analytics workflows
+- Meta-agent adaptive strategy building
+- Agent-to-agent communication pipelines
+- Time series forecasting workflows
+- Automated report generation
+
+The system integrates multiple intelligent agents that collaborate together to scrape data, analyze information, coordinate workflows, and generate automated analytics outputs.
+
+---
+
+# Core Features
+
+# AutoGen Conversable Analytics Agents
+
+Developed AI-powered conversational analytics agents for collaborative workflow execution.
+
+## Analytics Agents
+
+- DataAnalyst
+- StrategyPlanner
+- ForecastAgent
+- InsightReporter
+- MetaAgent
+
+Implemented collaborative group-chat workflows where agents coordinate analytics tasks automatically.
+
+---
+
+# Meta-Agent Builder
+
+Developed a meta-agent system for adaptive workflow planning and analysis orchestration.
+
+## Meta-Agent Features
+
+- adaptive analytics strategy generation
+- workflow coordination
+- dynamic task routing
+- agent collaboration management
+- automated execution planning
+
+Explored AI-inspired autonomous decision-making workflows.
+
+---
+
+# SidekickBrowser Research Automation
+
+Built an AI-powered automated research system using LangGraph and Playwright.
+
+## Research Features
+
+- automated website navigation
+- intelligent web scraping
+- content extraction workflows
+- research summarization
+- markdown report generation
+- JSON structured data export
+
+Implemented workflow-based autonomous research pipelines.
+
+---
+
+# A2A Multi-Agent Communication Pipeline
+
+Developed agent-to-agent communication systems using message streaming technologies.
+
+## Communication Features
+
+- RabbitMQ messaging workflows
+- Redis Streams integration
+- asynchronous agent communication
+- distributed task coordination
+- workflow synchronization
+
+Explored production-style multi-agent communication systems.
+
+---
+
+# Time Series Forecasting Agent Pipeline
+
+Implemented forecasting workflows aligned with time series analytics concepts.
+
+## Forecasting Features
+
+- trend prediction workflows
+- analytics visualization
+- forecasting chart generation
+- metrics computation
+- PNG forecast export
+- JSON metrics export
+
+Integrated forecasting pipelines into the larger AI analytics workflow.
+
+---
+
+# Technologies Used
+
+# Languages
+
+- Python
+
+---
+
+# AI & Automation
+
+- AutoGen
+- LangGraph
+- Playwright
+
+---
+
+# Data & Forecasting
+
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-learn
+
+---
+
+# Communication Systems
+
+- RabbitMQ
+- Redis Streams
+
+---
+
+# Utilities
+
+- JSON
+- AsyncIO
+- Pathlib
+
+---
+
+# Project Structure
+
+```text
+sidekickbrowser_data_copilot/
+│
+├── sidekick_browser.py
+├── autogen_group_chat.py
+├── a2a_messaging.py
+├── timeseries_agent.py
+├── meta_agent.py
+├── requirements.txt
+├── README.md
+│
+├── outputs/
+│   ├── report_xxx.md
+│   ├── data_xxx.json
+│   ├── forecast_xxx.png
+│   ├── metrics_xxx.json
+│   └── groupchat_report_xxx.md
+```
+
+---
+
+# Setup Instructions
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+playwright install chromium
+```
+
+---
+
+# Run Project
+
+## SidekickBrowser Research Agent
+
+```bash
+python sidekick_browser.py "AI trends"
+```
+
+## AutoGen Group Chat
+
+```bash
+python autogen_group_chat.py "climate data"
+```
+
+## A2A Messaging
+
+```bash
+python a2a_messaging.py
+```
+
+## Time Series Forecasting
+
+```bash
+python timeseries_agent.py
+```
+
+---
+
+
+
+# Key Learnings
+
+This project helped in understanding:
+
+- Conversable AI agent systems
+- Multi-agent communication workflows
+- AI-powered research automation
+- LangGraph orchestration
+- AutoGen collaborative workflows
+- Forecasting pipelines
+- Distributed agent communication
+- Workflow automation systems
+
+---
+
+# Learning Outcomes
+
+- Built AI-powered conversational analytics agents
+- Developed autonomous research workflows
+- Implemented LangGraph orchestration systems
+- Explored RabbitMQ and Redis Streams communication
+- Built forecasting analytics pipelines
+- Automated report generation workflows
+- Improved multi-agent AI workflow understanding
+
+---
+
+# Internship Context
+
+Built as part of:
+
+- IIT Indore AI & Data Science Internship
+- Agentic AI Workflow Practice
+- Multi-Agent Systems Engineering
+- AI Automation & Forecasting Learning
+- Autonomous Analytics Systems Development
 
 ## Grand Capstone
 DataSense AI — Autonomous Intelligent Data Analysis and Insights Platform

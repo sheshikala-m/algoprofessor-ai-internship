@@ -1,0 +1,149 @@
+{
+  "normality": {
+    "sales_amount": {
+      "statistic": 0.9895,
+      "p_value": 0.001251,
+      "is_normal": false
+    },
+    "units_sold": {
+      "statistic": 0.9446,
+      "p_value": 0.0,
+      "is_normal": false
+    },
+    "discount_pct": {
+      "statistic": 0.9531,
+      "p_value": 0.0,
+      "is_normal": false
+    },
+    "customer_rating": {
+      "statistic": 0.9576,
+      "p_value": 0.0,
+      "is_normal": false
+    },
+    "return_rate": {
+      "statistic": 0.9624,
+      "p_value": 0.0,
+      "is_normal": false
+    },
+    "marketing_spend": {
+      "statistic": 0.9459,
+      "p_value": 0.0,
+      "is_normal": false
+    },
+    "profit_margin": {
+      "statistic": 0.9501,
+      "p_value": 0.0,
+      "is_normal": false
+    },
+    "num_reviews": {
+      "statistic": 0.9451,
+      "p_value": 0.0,
+      "is_normal": false
+    },
+    "high_value": {
+      "statistic": 0.6365,
+      "p_value": 0.0,
+      "is_normal": false
+    }
+  },
+  "outliers": {
+    "sales_amount": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": 660.4187,
+      "upper_bound": 1636.1088
+    },
+    "units_sold": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": -77.625,
+      "upper_bound": 235.375
+    },
+    "discount_pct": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": -0.1935,
+      "upper_bound": 0.5905
+    },
+    "customer_rating": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": 1.4,
+      "upper_bound": 6.2
+    },
+    "return_rate": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": -0.074,
+      "upper_bound": 0.286
+    },
+    "marketing_spend": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": -487.4975,
+      "upper_bound": 1516.5625
+    },
+    "profit_margin": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": -0.1711,
+      "upper_bound": 0.6499
+    },
+    "num_reviews": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": -278.125,
+      "upper_bound": 750.875
+    },
+    "high_value": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": -1.5,
+      "upper_bound": 2.5
+    }
+  },
+  "significant_correlations": [
+    {
+      "feature_a": "sales_amount",
+      "feature_b": "return_rate",
+      "pearson_r": -0.1182,
+      "p_value": 0.008149,
+      "significant": true
+    },
+    {
+      "feature_a": "sales_amount",
+      "feature_b": "profit_margin",
+      "pearson_r": -0.1181,
+      "p_value": 0.008182,
+      "significant": true
+    },
+    {
+      "feature_a": "sales_amount",
+      "feature_b": "num_reviews",
+      "pearson_r": -0.1019,
+      "p_value": 0.022615,
+      "significant": true
+    },
+    {
+      "feature_a": "sales_amount",
+      "feature_b": "high_value",
+      "pearson_r": 0.8271,
+      "p_value": 0.0,
+      "significant": true
+    },
+    {
+      "feature_a": "return_rate",
+      "feature_b": "high_value",
+      "pearson_r": -0.0932,
+      "p_value": 0.037212,
+      "significant": true
+    },
+    {
+      "feature_a": "profit_margin",
+      "feature_b": "high_value",
+      "pearson_r": -0.1067,
+      "p_value": 0.016988,
+      "significant": true
+    }
+  ]
+}

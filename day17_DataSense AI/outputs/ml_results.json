@@ -1,0 +1,68 @@
+{
+  "pca": {
+    "n_components": 5,
+    "explained_variance_ratio": [
+      0.1548,
+      0.1435,
+      0.1301,
+      0.1292,
+      0.1202
+    ],
+    "cumulative_variance": 0.6778
+  },
+  "kmeans": {
+    "n_clusters": 4,
+    "silhouette_score": 0.0953,
+    "cluster_sizes": {
+      "0": 124,
+      "1": 123,
+      "2": 135,
+      "3": 118
+    },
+    "inertia": 3092.71
+  },
+  "random_forest": {
+    "accuracy": 1.0,
+    "cv_mean": 0.998,
+    "cv_std": 0.004,
+    "top_features": [
+      {
+        "feature": "sales_amount",
+        "importance": 0.7985
+      },
+      {
+        "feature": "marketing_spend",
+        "importance": 0.0331
+      },
+      {
+        "feature": "return_rate",
+        "importance": 0.0327
+      },
+      {
+        "feature": "discount_pct",
+        "importance": 0.0321
+      },
+      {
+        "feature": "num_reviews",
+        "importance": 0.0275
+      },
+      {
+        "feature": "profit_margin",
+        "importance": 0.0274
+      },
+      {
+        "feature": "units_sold",
+        "importance": 0.0267
+      },
+      {
+        "feature": "customer_rating",
+        "importance": 0.0221
+      }
+    ]
+  },
+  "svm": {
+    "accuracy": 0.95,
+    "kernel": "rbf",
+    "C": 1.0
+  }
+}

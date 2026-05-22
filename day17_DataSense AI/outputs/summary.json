@@ -1,0 +1,15 @@
+{
+  "pipeline": "DataSense AI",
+  "timestamp": "2026-05-22T12:51:38.783848",
+  "agents_used": [
+    "ScraperAgent",
+    "DataAnalyst",
+    "StatisticsEngine",
+    "MLOrchestrator",
+    "ForecastingAgent",
+    "InsightReporter"
+  ],
+  "data_profile": {},
+  "ml_summary": {},
+  "forecast_summary": {}
+}

@@ -1,0 +1,210 @@
+{
+  "shape": [
+    500,
+    13
+  ],
+  "columns": [
+    "date",
+    "category",
+    "region",
+    "channel",
+    "sales_amount",
+    "units_sold",
+    "discount_pct",
+    "customer_rating",
+    "return_rate",
+    "marketing_spend",
+    "profit_margin",
+    "num_reviews",
+    "high_value"
+  ],
+  "dtypes": {
+    "date": "datetime64[us]",
+    "category": "str",
+    "region": "str",
+    "channel": "str",
+    "sales_amount": "float64",
+    "units_sold": "int64",
+    "discount_pct": "float64",
+    "customer_rating": "float64",
+    "return_rate": "float64",
+    "marketing_spend": "float64",
+    "profit_margin": "float64",
+    "num_reviews": "int64",
+    "high_value": "int64"
+  },
+  "numeric_columns": [
+    "sales_amount",
+    "units_sold",
+    "discount_pct",
+    "customer_rating",
+    "return_rate",
+    "marketing_spend",
+    "profit_margin",
+    "num_reviews",
+    "high_value"
+  ],
+  "categorical_columns": [
+    "category",
+    "region",
+    "channel"
+  ],
+  "datetime_columns": [
+    "date"
+  ],
+  "missing_values": {
+    "date": 0,
+    "category": 0,
+    "region": 0,
+    "channel": 0,
+    "sales_amount": 0,
+    "units_sold": 0,
+    "discount_pct": 0,
+    "customer_rating": 0,
+    "return_rate": 0,
+    "marketing_spend": 0,
+    "profit_margin": 0,
+    "num_reviews": 0,
+    "high_value": 0
+  },
+  "descriptive_stats": {
+    "sales_amount": {
+      "count": 500.0,
+      "mean": 1150.547,
+      "std": 154.652,
+      "min": 792.66,
+      "25%": 1026.302,
+      "50%": 1146.355,
+      "75%": 1270.225,
+      "max": 1553.78
+    },
+    "units_sold": {
+      "count": 500.0,
+      "mean": 79.176,
+      "std": 44.535,
+      "min": 1.0,
+      "25%": 39.75,
+      "50%": 82.0,
+      "75%": 118.0,
+      "max": 149.0
+    },
+    "discount_pct": {
+      "count": 500.0,
+      "mean": 0.201,
+      "std": 0.116,
+      "min": 0.001,
+      "25%": 0.1,
+      "50%": 0.21,
+      "75%": 0.296,
+      "max": 0.4
+    },
+    "customer_rating": {
+      "count": 500.0,
+      "mean": 3.793,
+      "std": 0.716,
+      "min": 2.5,
+      "25%": 3.2,
+      "50%": 3.8,
+      "75%": 4.4,
+      "max": 5.0
+    },
+    "return_rate": {
+      "count": 500.0,
+      "mean": 0.105,
+      "std": 0.056,
+      "min": 0.001,
+      "25%": 0.061,
+      "50%": 0.109,
+      "75%": 0.151,
+      "max": 0.199
+    },
+    "marketing_spend": {
+      "count": 500.0,
+      "mean": 505.778,
+      "std": 277.807,
+      "min": 51.28,
+      "25%": 264.025,
+      "50%": 490.74,
+      "75%": 765.04,
+      "max": 997.74
+    },
+    "profit_margin": {
+      "count": 500.0,
+      "mean": 0.241,
+      "std": 0.117,
+      "min": 0.05,
+      "25%": 0.137,
+      "50%": 0.234,
+      "75%": 0.342,
+      "max": 0.449
+    },
+    "num_reviews": {
+      "count": 500.0,
+      "mean": 238.556,
+      "std": 146.148,
+      "min": 0.0,
+      "25%": 107.75,
+      "50%": 215.0,
+      "75%": 365.0,
+      "max": 498.0
+    },
+    "high_value": {
+      "count": 500.0,
+      "mean": 0.5,
+      "std": 0.501,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.5,
+      "75%": 1.0,
+      "max": 1.0
+    }
+  },
+  "sample_rows": [
+    {
+      "date": "2023-01-01 00:00:00",
+      "category": "Clothing",
+      "region": "South",
+      "channel": "Mobile App",
+      "sales_amount": 1039.74,
+      "units_sold": 79,
+      "discount_pct": 0.249,
+      "customer_rating": 3.9,
+      "return_rate": 0.077,
+      "marketing_spend": 463.86,
+      "profit_margin": 0.069,
+      "num_reviews": 131,
+      "high_value": 0
+    },
+    {
+      "date": "2023-01-01 00:00:00",
+      "category": "Home & Garden",
+      "region": "West",
+      "channel": "Online",
+      "sales_amount": 1233.51,
+      "units_sold": 8,
+      "discount_pct": 0.166,
+      "customer_rating": 4.0,
+      "return_rate": 0.131,
+      "marketing_spend": 67.47,
+      "profit_margin": 0.372,
+      "num_reviews": 96,
+      "high_value": 1
+    },
+    {
+      "date": "2023-01-02 00:00:00",
+      "category": "Clothing",
+      "region": "North",
+      "channel": "Online",
+      "sales_amount": 994.58,
+      "units_sold": 145,
+      "discount_pct": 0.224,
+      "customer_rating": 3.9,
+      "return_rate": 0.098,
+      "marketing_spend": 804.76,
+      "profit_margin": 0.168,
+      "num_reviews": 84,
+      "high_value": 0
+    }
+  ],
+  "eda_timestamp": "2026-05-22T12:51:19.955643"
+}
